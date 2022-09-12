@@ -14,15 +14,7 @@ class ApplicationController < Sinatra::Base
     all_us=Login.all
     all_us.to_json
 
-    # realUser=Login.find_by_email(params[:email])
-    # if realUser.password == params[:password]
-    #   response = {
-    #     "message" => "login successfully",
-    #     "user" =>{
-    #       "username" =>realUser.username,
-    #       "email" =>realUser.email
-    #     }
-    #   }
+  
 
 
 
