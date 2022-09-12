@@ -63,14 +63,14 @@ class ApplicationController < Sinatra::Base
 
  
 
-  patch '/details/:id' do 
-    new_update = Detail.find(params[:id])
-    new_update.update(
-      country: params[:country],
-      town: params[:town],
-      date: params[:date],
-      description: params[:description],
+  # patch '/details/:id' do 
+  #   new_update = Detail.find(params[:id])
+  #   new_update.update(
+  #     country: params[:country],
+  #     town: params[:town],
+  #     date: params[:date],
+  #     description: params[:description],
     
-    )
-  end
+  #   )
+  # end
 end
