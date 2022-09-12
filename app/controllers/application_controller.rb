@@ -2,31 +2,25 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
- 
-
+       
   get '/details' do
-   all_users=Detail.all
+   all_users  = Detail.all
    all_users.to_json
   end
 
 
-  get '/logins' do
-    all_us=Login.all
-    all_us.to_json
-
-  
+  # get '/logins' do
+  #   all_us=Login.all
+  #   all_us.to_json
 
 
+  #  end
 
-   end
+  #  get '/registers' do
+  #   all_=Register.all
+  #   all_.to_json
+  #  end
 
-   get '/registers' do
-    all_=Register.all
-    all_.to_json
-   end
-
-
- 
 
 
   delete '/details/:id' do
@@ -50,22 +44,22 @@ class ApplicationController < Sinatra::Base
   end
 
 
-  post '/logins' do 
-    new_login = Login.create(
-      email: params[:email],
-      password: params[:password],
-    )
-    new_login.to_json
-  end
+  # post '/logins' do 
+  #   new_login = Login.create(
+  #     email: params[:email],
+  #     password: params[:password],
+  #   )
+  #   new_login.to_json
+  # end
 
-  post '/register' do 
-    new_register = Register.create(
-      username: params[:username],
-      email: params[:email],
-      password: params[:password],
-    )
-    new_register.to_json
-  end
+  # post '/register' do 
+  #   new_register = Register.create(
+  #     username: params[:username],
+  #     email: params[:email],
+  #     password: params[:password],
+  #   )
+  #   new_register.to_json
+  # end
 
  
 
