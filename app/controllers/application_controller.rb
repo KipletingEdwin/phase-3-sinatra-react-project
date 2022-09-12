@@ -9,20 +9,6 @@ class ApplicationController < Sinatra::Base
   end
 
 
-  # get '/logins' do
-  #   all_us=Login.all
-  #   all_us.to_json
-
-
-  #  end
-
-  #  get '/registers' do
-  #   all_=Register.all
-  #   all_.to_json
-  #  end
-
-
-
   delete '/details/:id' do
     # find the detail using the ID
     review = Detail.find(params[:id])
@@ -37,8 +23,7 @@ class ApplicationController < Sinatra::Base
       country: params[:country],
       town: params[:town],
       date: params[:date],
-      description: params[:description],
-     
+      description: params[:description]
     )
     new_instance.to_json
   end
