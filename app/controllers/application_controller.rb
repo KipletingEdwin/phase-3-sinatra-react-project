@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
     review = Detail.find(params[:id])
     # delete the detail
     review.destroy
-    # send a response with the deleted detail as JSON
+   
     review.to_json
   end
 
